@@ -14,6 +14,10 @@ class UsersStorage {
     return Object.values(this.storage);
   }
 
+  searchUsers(query) {
+    return Object.values(this.storage).filter((user) => user.firstName == query);
+  }
+
   getUser(id) {
     return this.storage[id];
   }

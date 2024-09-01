@@ -45,9 +45,11 @@ exports.usersListGet = (req, res) => {
 };
 
 exports.usersSearchGet = (req, res) => {
+  const query = req.query.searchValue;
   res.render("search", {
     title: "Search results",
-    // users: usersStorage.getUsers(),
+    query: query,
+    users: usersStorage.searchUsers(query),
   });
 };
 
