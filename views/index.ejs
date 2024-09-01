@@ -5,7 +5,11 @@
   </head>
   <body>
     <h1><%= title %></h1>
-
+    <form action="/search" method="GET">
+      <label for="">Search users:</label>
+      <input type="text">
+      <button type="submit">Search</button>
+    </form>
     <ul>
       <% if (locals.users) { %> <% users.forEach(user => { %>
       <li>

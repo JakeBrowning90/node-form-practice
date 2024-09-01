@@ -44,6 +44,13 @@ exports.usersListGet = (req, res) => {
   });
 };
 
+exports.usersSearchGet = (req, res) => {
+  res.render("search", {
+    title: "Search results",
+    // users: usersStorage.getUsers(),
+  });
+};
+
 exports.usersCreateGet = (req, res) => {
   res.render("createUser", {
     title: "Create user",
