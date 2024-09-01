@@ -21,6 +21,21 @@
         value="<%= user.lastName %>"
         required
       />
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        value="<%= user.email %>"
+        required
+      />
+      <!-- Age -->
+      <label for="age">Age:</label>
+      <input type="number" name="age" id="age" value="<%= user.age %>" />
+      <!-- Bio -->
+      <label for="bio">Bio:</label>
+      <textarea name="bio" id="bio" maxlength="200"><%= user.bio %></textarea>
       <button type="submit">Update User</button>
     </form>
   </body>
